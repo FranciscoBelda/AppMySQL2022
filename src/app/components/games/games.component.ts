@@ -27,10 +27,11 @@ export class GamesComponent implements OnInit{
       data => {
         if(item.favorite) {
           this.snackBar.open(
-            'Añadido a favoritos', 'Close', {duration: 2000});
+            'Añadido a favoritos', 'Close',
+            {duration: 2000});
         } else this.snackBar.open(
-          'Eliminado de favoritos', 'Close', {duration: 2000});
-
+          'Eliminado de favoritos', 'Close',
+          {duration: 2000});
         this.loadFavorites();
       }
     )
