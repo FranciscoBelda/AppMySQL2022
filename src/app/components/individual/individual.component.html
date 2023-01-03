@@ -23,11 +23,11 @@
             </div>
           </mat-form-field>
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="3" [rowspan]="5">
-          <img [src]="gameForm.value.image? gameForm.value.image:
-'/assets/no-image.png'">
-          <mat-grid-tile [colspan]="1" [rowspan]="5"></mat-grid-tile>
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-grid-tile [colspan]="4" [rowspan]="5">
+          <img [src]="gameForm.value.image != ''? gameForm.value.image:
+'/assets/images/no-image-icon.jpg'" [alt]="gameForm.value.image">
+        </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
             <mat-form-field class="ancho80">
               <mat-label>Subitle</mat-label>
               <input type="text" formControlName="subtitle" matInput>
@@ -91,7 +91,6 @@
             </button>
           </mat-grid-tile>
 
-        </mat-grid-tile>
       </mat-grid-list>
     </form>
   </mat-card>
